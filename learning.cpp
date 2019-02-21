@@ -5,13 +5,9 @@
 
 using namespace std;
 
-const double PI = 3.14159;
-
 int main(){
-	
-	bool bMarried = true;
 
-	printf("hello world ");
+	printf("hello world I'm Paul ");
 
 	return 0;
 }
