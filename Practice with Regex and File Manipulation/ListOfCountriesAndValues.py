@@ -2,12 +2,12 @@ import re
 
 def main(file):
     f = open(file,"rt")
-    thing = f.read()
+    list_fromFile = f.read()
     f.close()
     pattern = r"(^\w+)[\s][=][\s](\d+$)"
     data_listName = []
     data_listValue = []
-    for i in re.finditer(pattern,thing,re.MULTILINE):
+    for i in re.finditer(pattern,list_fromFile,re.MULTILINE):
         data_listName.append(str(i.group(1)))
         data_listValue.append(int(i.group(2)))
         data_listName.sort()
