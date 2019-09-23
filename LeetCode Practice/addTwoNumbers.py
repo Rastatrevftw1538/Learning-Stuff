@@ -14,25 +14,17 @@ class Solution:
         final_output = []
         while l1 != None:
             n.insert(0,(str(l1.val)))
-            #print(n)
             l1 = l1.next
         while l2 != None:
             n1.insert(0,str(l2.val))
-            #print(n1)
             l2 = l2.next
-        print(n1)
         ansr = str(int(str(num1.join(n1)))+int(str(num.join(n))))
-        print(ansr)
         for x in range(len(str(ansr))-1,-1,-1):
-            print(x)
             final_output.append(int(str(ansr)[x]))
-        print(final_output)
         blah = ListNode(0)
         final_output_Node = blah
         for i in final_output:
-            #print(i)
             final_output_Node.next = ListNode(i)
-            #print(final_output_Node.val)
             final_output_Node = final_output_Node.next
         final_output_Node = blah.next
         return(final_output_Node)
